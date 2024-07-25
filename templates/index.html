@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Web App version 2</title>
+    <title>Web App version 3</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,10 +26,19 @@
 
 <body>
     <div>
-        <h1>My System Information</h1>
-        <h3>OS Information: {{ os_information }}</h3>
-        <h3>CPU Usage: {{ cpu }}</h3>
-        <h3>Memory Usage: {{ memory }}</h3>
+        <h1>MySQL Access Logs</h1>'
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Time</th>
+            </tr>
+            {% for log in logs %}
+            <tr>
+                <td>{{ log[0] }}</td>
+                <td>{{ log[1] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 </body>
 
